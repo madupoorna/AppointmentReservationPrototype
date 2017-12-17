@@ -1,42 +1,32 @@
 package com.ueeprototype.ueeprototype;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 public class loginActivity extends AppCompatActivity {
-
-    private static final float BLUR_RADIUS = 25f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //ImageView bgImage = (ImageView) findViewById(R.id.loginImageBG);
+        Button signIn = (Button) findViewById(R.id.signinBtn);
 
-        //bgImage.setImageBitmap(blur());
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent slideactivity = new Intent(v.getContext(), MainActivity.class);
 
+                Bundle bndlanimation = ActivityOptions.makeCustomAnimation(
+                        getApplicationContext(), R.anim.animation, R.anim.animation2).toBundle();
+
+                startActivity(slideactivity, bndlanimation);
+            }
+        });
     }
-/*
-    public Bitmap blur() {
 
-        Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.sliit_login_image);
-
-        if (null == image) return null;
-
-        Bitmap outputBitmap = Bitmap.createBitmap(image);
-        final RenderScript renderScript = RenderScript.create(this);
-        Allocation tmpIn = Allocation.createFromBitmap(renderScript, image);
-        Allocation tmpOut = Allocation.createFromBitmap(renderScript, outputBitmap);
-
-        //Intrinsic Gausian blur filter
-        ScriptIntrinsicBlur theIntrinsic = ScriptIntrinsicBlur.create(renderScript, Element.U8_4(renderScript));
-        theIntrinsic.setRadius(BLUR_RADIUS);
-        theIntrinsic.setInput(tmpIn);
-        theIntrinsic.forEach(tmpOut);
-        tmpOut.copyTo(outputBitmap);
-
-        return outputBitmap;
-    }
-*/
 }

@@ -7,4 +7,6 @@
     <string name="user_name">Email</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign in</string>
+    <string name="student_name">Student name</string>
+    <string name="student_email">student.k@sliit.lk</string>
 </resources>
