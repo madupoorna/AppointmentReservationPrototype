@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ueeprototype.ueeprototype.EmailActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/email_laptop_computer_marketing_ss_1920"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:layout_weight="1"
+        android:text="Received Emails"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/circleImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/user"
+        app:civ_border_color="#000000"
+        app:civ_border_width="2dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="188dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/emailFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/white"
+        android:src="@drawable/number3_png14984"
+        app:fabSize="normal"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="24dp"
+        android:layout_alignBottom="@+id/circleImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/email_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/emailFab"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

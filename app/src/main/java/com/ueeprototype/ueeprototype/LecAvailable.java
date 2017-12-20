@@ -5,13 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -62,12 +62,12 @@ public class LecAvailable extends Fragment {
                 TextView emailText = (TextView) dialog.findViewById(R.id.EmailTextView);
                 TextView Mobiletext = (TextView) dialog.findViewById(R.id.mobileNoTxtView);
 
-                nameText.setText(getDataSet().get(position).getName());
-                emailText.setText(getDataSet().get(position).getEmail());
-                Mobiletext.setText(getDataSet().get(position).getMobileNo());
+                nameText.setText("Name : "+getDataSet().get(position).getName());
+                emailText.setText("Email: "+getDataSet().get(position).getEmail());
+                Mobiletext.setText("Tel  : "+getDataSet().get(position).getMobileNo());
 
-                FloatingActionButton emailBtn= (FloatingActionButton) dialog.findViewById(R.id.emailFab);
-                FloatingActionButton callBtn= (FloatingActionButton) dialog.findViewById(R.id.callFab);
+                Button emailBtn= (Button) dialog.findViewById(R.id.emailFab);
+                Button callBtn= (Button) dialog.findViewById(R.id.callFab);
 
                 emailBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -99,9 +99,9 @@ public class LecAvailable extends Fragment {
 
     private ArrayList<DataObject> getDataSet() {
         ArrayList results = new ArrayList<DataObject>();
-        results.add(0,new DataObject("zxc dfssdf","565456","asda@sddf"));
-        results.add(1,new DataObject("asd dfssdf","789897","asdadfdb@gdfg"));
-        results.add(2,new DataObject("qwe dfssdf","123131","dfgfgh@fghf"));
+        results.add(0,new DataObject("Mr. Saman perera","714589657","perera.s@sliit.lk"));
+        results.add(1,new DataObject("Mr. Ajith athawudha","778452365","athawudha.a@sliit.lk"));
+        results.add(2,new DataObject("Ms. Kamani Silva","768545785","silva.k@sliit.lk"));
 
         return results;
     }

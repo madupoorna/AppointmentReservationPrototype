@@ -32,7 +32,14 @@
             android:name=".LecturerAvailTabActivity"
             android:label="@string/title_activity_lecturer_avail"
             android:theme="@style/AppTheme" />
-
+        <activity android:name=".StduentInfoActivity" />
+        <activity android:name=".EmailActivity" />
+        <activity
+            android:name=".OthersAvailabilityTabActivity"
+            android:label="@string/title_activity_others_availability_tab"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".LecturerInfoActivity" />
+        <activity android:name=".LecturerHomeActivity"></activity>
     </application>
 
 </manifest>

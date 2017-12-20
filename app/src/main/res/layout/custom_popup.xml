@@ -41,23 +41,21 @@
             android:layout_height="fill_parent"
             android:layout_margin="10dp">
 
-        <android.support.design.widget.FloatingActionButton
+        <Button
             android:id="@+id/callFab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@android:color/white"
-            android:src="@drawable/ic_call_black"
-            app:fabSize="normal"/>
+            android:text="Call"
+            android:backgroundTint="@android:color/white" />
 
-        <android.support.design.widget.FloatingActionButton
+        <Button
             android:id="@+id/emailFab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="@android:color/white"
-            android:src="@drawable/ic_email_black"
-            app:fabSize="normal"/>
+            android:text="Email"
+            android:backgroundTint="@android:color/white" />
 
         </TableRow>
 
